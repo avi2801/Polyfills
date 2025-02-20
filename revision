@@ -1,0 +1,17 @@
+//React some useful things
+
+// usually there are two ways to handle the data inside a form and these two ways are the reason we have two types of component
+// first one is controlled component and the second one is uncontrolled component
+
+// Controlled Component -> the component which maintain the state or manage the stats of the component using react
+// and not the dom are controlled component -> like using useState in the code
+
+// Uncontrolled Component -> the component that don't manage the state using react and use the dom to access and get the value of the
+// element are uncontrolled components -> like using useRef
+
+
+// why one should avoid using the uncontrolled component
+// 1. it may not be always sync with React and it's lifecyle
+// 2. It makes error handling a bit difficult
+// 3. manual updating the DOM in react is not a good practice to follow
+// 4. reusabilty is sometime hampered

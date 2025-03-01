@@ -18,3 +18,6 @@ Promise.myAny = function (promiseArray) {
 		})
 	})
 }
+
+
+

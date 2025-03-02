@@ -12,8 +12,8 @@ Array.prototype.myReduce = function (callBack, initialValue) {
 		acc = this[0];
 		startIndex= 1
 	}
-	for (let i = 0; i < this.length; i++){
-		acc = callBack.call(acc,this[i],i,this)
+	for (let i = startIndex; i < this.length; i++){
+		acc = callBack(acc,this[i],i,this)
 	}
 	return acc;
 }

@@ -28,18 +28,23 @@ console.log(obj4)
 // how to make deep copy
 // because in this string approach the function and dates if there are any won't work
 
-function deepCopy(obj) {
-	// base condition
-	if (typeof obj !== 'object' || obj === null) {
-		return obj
-	}
-	let newObj = Array.isArray(obj) ? [] : {}
-	for (let i in obj) {
-		newObj[i] = obj[i];
-	}
-	return newObj;
-}
+const ar = [1, 2, 3, 4, 5]
 
+function deepCopy(obj) {
+	if (typeof obj !== 'object' || obj === null) {
+		return obj;
+	}
+	if (Array.isArray(obj)) {
+		return obj.map((item)=>deepCopy(item))
+	}
+	const copy = {}
+	for (let key in obj) {
+		if (obj.hasOwnProperty(key)) {
+			copy[key] = deepCopy(obj[key])
+		}
+	}
+	return copy;
+}
 
 
 
